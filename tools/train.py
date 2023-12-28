@@ -82,6 +82,11 @@ def main(args):
         collate_fn=naive_collate,
         drop_last=True,
     )
+    for batch in train_dataloader:
+        print(batch)
+        break
+    import pdb
+    pdb.set_trace()
     val_dataloader = torch.utils.data.DataLoader(
         val_dataset,
         batch_size=cfg.device.batchsize_per_gpu,

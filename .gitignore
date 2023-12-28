@@ -38,6 +38,7 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 midv500_data/
+workspace/
 .tox/
 .coverage
 .coverage.*
