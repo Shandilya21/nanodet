@@ -130,7 +130,7 @@ def check_dataset_dir(data_dir):
 
 def apply_data_processing(dataset_directory):
     processor = MIDV500DataProcessor(dataset_directory)
-    total_class, class_names = processor.process_dataset_new()
+    total_class, class_names = processor.process_dataset()
     return total_class, class_names
 
 
@@ -145,7 +145,7 @@ if __name__ == "__main__":
     else:
         print(f"The dataset directory '{dataset_dir}' is already present. Skipping download.")
     data_directory = './midv500_data/midv500'
-    output_directory = './processed_midv500_data/midv500'
+    output_directory = './midv500_data/processed_midv500_data/midv500'
     total_classes, class_names = apply_data_processing(data_directory)
     print(f"Total Classes: {total_classes}")
     print(f"Class Names: {class_names}")
